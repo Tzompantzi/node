@@ -1,0 +1,64 @@
+FORMAT: 1A
+HOST: http://127.0.0.1:3000
+
+# gtzompantzi
+
+Polls is a simple API allowing consumers to view polls and vote in them.
+
+## Metodo1 [/questions]
+
+### Hola mundo [GET]
+
++ Response 200 (application/json)
+
+        
+            {
+                "message": "Hola gtzompantzi"
+            }
+
+## Metodo2 [/MPost]
+### Metodos Post [POST]
++ Request (application/json)
+
+        {
+            "usuario": "ado",
+            "password": "admin123"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "usuario": "ado",
+                "password": "admin123"
+            }
+            
++ Response 401 (text/plain)
+
+        There is no such a message for you, dear guest. ni modo mano.            
+            
+## Metodo3 [/getCatalo]
+### Metodos Post [POST]
++ Request (application/json)
+
+        {
+            "catalogo": "pais"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+    
+            {
+            "codigo":0,
+            "mensaje":"okay",
+            "catalogo":[{
+                "nombre":"mexico",
+                "id":1
+                },{
+                "nombre":"rusia",
+                "id":1
+                }
+                ]
+            }
